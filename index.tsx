@@ -40,6 +40,10 @@ export default class OTPInputView extends Component<InputProps, OTPInputViewStat
         if (nextProps.code !== code) {
             this.setState({ digits: codeToArray(nextProps.code) })
         }
+         if (nextProps.reinitializationAfterCodeWasFilled && this.state.digits.length === this.props.pinCount) {
+            this.setState({ digits: [], selectedIndex: 0 });
+            this.focusField(0);
+        }
     }
 
     componentDidMount() {
