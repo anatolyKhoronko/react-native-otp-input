@@ -86,6 +86,11 @@ declare module '@twotalltotems/react-native-otp-input' {
      * Keyboard appearance. The value can be 'default', 'dark' or 'light'.
      */
     keyboardAppearance?: 'default' | 'dark' | 'light';
+    
+     /**
+     * Reset inputs and focust first one after code was filled.
+     */
+    reinitializationAfterCodeWasFilled?: boolean;
   }
 
   export interface OTPInputViewState {
